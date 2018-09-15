@@ -1,0 +1,22 @@
+.generic-card {
+  height: 300px;
+}
+
+.buy {
+  width: 80%;
+  margin-left: 10%;
+  position: absolute;
+  bottom: 0;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.addDisabled {
+  color: #C81010;
+}
+
+.cursor-not-allowed {
+  cursor: not-allowed;
+}

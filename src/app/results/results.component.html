@@ -1,0 +1,32 @@
+<h5>Keywords = {{keywords}}</h5>
+<h5 *ngIf="numberOfItems != null && numberOfItems > -1">Number of results: {{numberOfItems}}</h5>
+<div class="container">
+  <div class="row">
+    <div *ngFor="let item of items" class="col s3">
+      <div class="card generic-card">
+        <div class="card-image waves-effect waves-block waves-light">
+          <h5>{{ (item && item.name) ? item.name : null}}</h5>
+        </div>
+        <div class="card-content">
+          {{(item && item.price && item.price.amount) ? item.price.amount : null}}({{(item && item.price &&
+          item.price.currency) ? item.price.currency : null}})
+          <p>{{(item && item.state) ? item.state : null}}</p>
+        </div>
+        <div class="buy" *ngIf="item.state == 'AVAILABLE'">
+          <input type="number" [id]="item.uri" min="1" max="9">
+          <p><a class="cursor-pointer" (click)="addToCart(item.addToCartForm)">Add to cart</a></p>
+        </div>
+        <div class="buy" *ngIf="item.state != 'AVAILABLE'">
+          <input class="cursor-not-allowed" type="number" min="1" max="9" disabled>
+          <p><a class="addDisabled cursor-not-allowed" aria-disabled="true">Add to cart</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ul class="pagination">
+    <li class="waves-effect" *ngFor="let dummy of ' '.repeat(numberOfPages).split(''), let x = index"
+        [class.active]="requestedPage == x+1">
+      <a href="/results/{{keywords}}?page={{x+1}}">{{x+1}}</a>
+    </li>
+  </ul>
+</div>
