@@ -25,19 +25,19 @@ The app is dockerized, but is also runnable without Docker.
 
 If you don't have Docker installed, you need both node and npm instead, then run:
 
-```
+```console
 npm install
 npm install -g @angular/cli
 ng serve
 ```
 
-Open a browser and visit `http://localhost:4200`
+Open a browser and visit [http://localhost:4200](http://localhost:4200)
 
 If you have Docker:
 
-```
+```console
 docker build -t angular-ep .
 docker run -d -p 80:80 angular-ep
 ```
 
-Open a browser and visit `http://localhost:80`
+Open a browser and visit [http://localhost:80](http://localhost:80)
