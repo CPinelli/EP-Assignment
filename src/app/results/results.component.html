@@ -2,7 +2,7 @@
 <h5 *ngIf="numberOfItems != null && numberOfItems > -1">Number of results: {{numberOfItems}}</h5>
 <div class="container">
   <div class="row">
-    <div *ngFor="let item of items" class="col s12 m6 l3">
+    <div *ngFor="let item of items" class="col s12 m6 l4 xl3">
       <div class="card generic-card">
         <div class="card-image waves-effect waves-block waves-light">
           <h5>{{ (item && item.name) ? item.name : null}}</h5>
