@@ -9,9 +9,9 @@ Main goal: learn to use the Cortex API.
 - Public authentication
 - Find items by keywords
 - Pagination
-- Disabling objects that are not available
-- Add items to the cart
-- Review the cart
+- Disabling unavailable items
+- Add items to cart
+- Cart review
 - Dockerization of the application
 - Deployment of an Nginx server (not necessary, but Docker does not work the exact same way between MacOS, Windows and Linux, an HTTP server makes it very similar and adds no complexity)
 
@@ -21,20 +21,23 @@ I could not finish the complete checkout, because a lot of documentation is not 
 
 # How to run it?
 
-The project is dockerized, but it is also runnable without.
+The app is dockerized, but is also runnable without Docker.
 
-If you don't have Docker, you need node and npm instead:
+If you don't have Docker installed, you need both node and npm instead, then run:
 
-`npm install`
-`npm install -g @angular/cli`
+```
+npm install
+npm install -g @angular/cli
+ng serve
+```
 
-`ng serve`
-
-Open a browser on `http://localhost:4200`
+Open a browser and visit `http://localhost:4200`
 
 If you have Docker:
 
-`docker build -t angular-ep .`
-`docker run -d -p 80:80 angular-ep`
+```
+docker build -t angular-ep .
+docker run -d -p 80:80 angular-ep
+```
 
-Open a browser on `http://localhost:80`
+Open a browser and visit `http://localhost:80`
