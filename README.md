@@ -37,4 +37,4 @@ If you have Docker:
 `docker build -t angular-ep .`
 `docker run -d -p 80:80 angular-ep`
 
-Open a browser on `http://localhost:4200`
+Open a browser on `http://localhost:80`
