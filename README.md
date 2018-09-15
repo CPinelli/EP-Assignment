@@ -8,6 +8,8 @@ Main goal: learn to use the Cortex API.
 - Development of an Angular 6 application
 - Public authentication
 - Find items by keywords
+- Pagination
+- Disabling objects that are not available
 - Add items to the cart
 - Review the cart
 - Dockerization of the application
